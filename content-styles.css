@@ -122,6 +122,10 @@ svg.fr-svg {
   z-index: 10;
 }
 
+div.table-div-draw {
+  width: 75%;
+}
+
 table.table-draw {
   color: #414141;
   font-size: 14px;
@@ -135,5 +139,7 @@ table.table-draw:not([width]) {
 }
 
 table.table-draw[border="0"] td, table.table-draw:not([border]) td, table.table-draw[border="0"] th, table.table-draw:not([border]) th {
-  border: 1px solid #ddd;
+  border: 1px solid rgb(46, 46, 46);
+  padding: 8px 12px;
+  width: 36px;
 }

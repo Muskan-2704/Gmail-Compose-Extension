@@ -78,7 +78,7 @@ const drawTable = (e) => {
     let colValue = $('#table-content-column-input').val();
     let rows = parseInt((rowValue == "")? 0 : rowValue);    
     let cols = parseInt((colValue == "")? 0 : colValue);
-    let htmlString = `<div><table class="table-draw">`;
+    let htmlString = `<div class="table-div-draw"><table class="table-draw">`;
     for(let row = 1; row <= rows; row++){
         htmlString += `<tr row-index = ${row}>`;
         for(let col=1;col<=cols;col++) {
@@ -97,8 +97,8 @@ const initEvents = () => {
     $('body').on('click', '.table-btn', showTablePopup);
     $('body').on('click', '.table-content-close', hideTablePopup);
     $('body').on('click', '.table-content-draw', drawTable);
-    $('body').on('keyup', '#table-content-row-input', isNumber);
-    $('body').on('keyup', '#table-content-row-input', isNumber);
+    $('body').on('keypress', '#table-content-row-input', isNumber);
+    $('body').on('keypress', '#table-content-column-input', isNumber);
 }
 
 
