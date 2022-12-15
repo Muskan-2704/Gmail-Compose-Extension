@@ -1,0 +1,26 @@
+{
+    "manifest_version": 3,
+    "name": "Gmail Compose Extension",
+    "description": "Gmail Compose Extension",
+    "version": "0.1.0",
+    "icons": {
+        "128": "logo.png",
+        "64": "logo.png"
+    },
+    "content_scripts": [
+        {
+          "matches": ["https://*.google.com/*"],
+          "css": ["content-styles.css"],
+          "js": ["js/jquery.min.js","content-script.js"]
+        }
+    ],
+    "web_accessible_resources": [
+      {
+        "resources": [
+          "js/*.js",
+          "static/*"
+        ],
+        "matches": ["https://*.google.com/*"]
+      }
+    ]
+  }
