@@ -125,7 +125,7 @@ const initStyling = (elems) => {
             // Creating button with posBtn class
             let $posBtn = $('<button></button>').attr("class", "posBtn").attr('data-index',index).text("+");
             // Creating input with type text and default value 11
-            let $inpEle = $('<input>').attr('type', 'text').attr('data-index',index).val('11');
+            let $inpEle = $('<input>').attr('type', 'text').attr('data-index',index).attr('readonly',true).val('11');
             // Appening input, buttons in div
             $divEle.append($negBtn, $inpEle, $posBtn);
             // Appending div element in main div
@@ -351,6 +351,8 @@ const captureFontSize = (e) => {
 
 // Testing code not complete code yet
 const handlingPartialSelection = (size) => {
+    let contenteditableDiv = document.querySelectorAll('div[contenteditable=true]');
+    contenteditableDiv[triggeredFrom-1].focus();
     document.execCommand('fontSize', false, 1);
     let allFont = document.querySelectorAll('font');
     /*let range = window.getSelection().getRangeAt(0);
@@ -381,8 +383,6 @@ const handlingPartialSelection = (size) => {
             node.style.fontSize = size+ "pt";
         }
     }
-    /*let contenteditableDiv = document.querySelectorAll('div[contenteditable=true]');
-    contenteditableDiv[triggeredFrom-1].focus();*/
 }
 
 
