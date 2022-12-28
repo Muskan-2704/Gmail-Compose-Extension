@@ -446,6 +446,35 @@ const fontDecrease = (event) => {
     $inpEle.val(fontSize);
 }
 
+const initSortStyle = () =>{
+    let sortMenuItem = document.createElement("button");
+    sortMenuItem.textContent = "Sort";
+    sortMenuItem.addEventListener('click', function() {
+        let searchBox = document.querySelector('input.gb_if');
+        searchBox.value = "is:inbox";
+        let searchBtn = document.querySelector('.gb_rf.gb_sf');
+        searchBtn.click();
+    });
+    return sortMenuItem;
+}
+
+const initSortStyling = (elem) => {
+    var dvelem3=document.createElement("div");
+    dvelem3.classList.add('G-Ni');
+    dvelem3.classList.add('J-J5-Ji');
+    dvelem3.appendChild(initSortStyle());
+    elem.appendChild(dvelem3);
+}
+
+const initSort = () => {
+    let interval = setInterval(function(){
+        let elem = document.querySelector('.G-tF');
+        if(elem){
+            clearInterval(interval);
+            initSortStyling(elem);      
+        }
+    },100);
+}
 
 
 const initializeControls = () => {
@@ -474,6 +503,7 @@ const initStylingOnLoad = () => {
 const init = async () => {
     setTimeout(initStylingOnLoad, 10000);
     setTimeout(initializeControls, 200);
+    setTimeout(initSort, 200);
 }
 
 export const app = async () => {

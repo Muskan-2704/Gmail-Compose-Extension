@@ -120,4 +120,23 @@ svg.fr-svg {
   overflow: auto;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 10;
+  padding: 4px !important;
+}
+
+.table-content {  
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+}
+
+.table-content span {
+  margin: 5px 10px 5px 0;
+}
+
+.table-content input {
+  vertical-align: middle;
+  margin: 5px 10px 5px 0;
+  padding: 4px;
+  background-color: #fff;
+  border: 1px solid #ddd;
 }
