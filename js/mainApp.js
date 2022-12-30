@@ -113,10 +113,10 @@ const initStyling = (elems) => {
         if (childElem.find('div.sup-btn').length == 0) {
             childElem.prepend('<div class="wG J-Z-I sup-btn" data-index="'+index+'">'+superScriptSvg+'</div>');
         }
-        if (childElem.find('div.table-btn').length == 0) {
+        /*if (childElem.find('div.table-btn').length == 0) {
             childElem.prepend('<div class="wG J-Z-I table-btn" data-index="'+index+'">'+tableSvg+'</div>');
             tablePopupPopulation();
-        }
+        }*/
         if (childElem.find('div.font-size').length == 0) {
             // Creating div with font-size and dropdown class
             let $divEle = $('<div></div>').attr('class', 'wG J-Z-I font-size dropdown').attr('style', "user-select:none; display:flex;");
@@ -503,7 +503,7 @@ const initStylingOnLoad = () => {
 const init = async () => {
     setTimeout(initStylingOnLoad, 10000);
     setTimeout(initializeControls, 200);
-    setTimeout(initSort, 200);
+    //setTimeout(initSort, 200);
 }
 
 export const app = async () => {
